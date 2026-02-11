@@ -12,6 +12,8 @@ repo: uptime_web                  # Your repository name (must match GitHub repo
 # SECTION 2: SITES TO MONITOR
 # ====================================
 sites:
+  - name: Google
+    url: https://www.google.com
   - name: ML Picture Downloader   # Display name (shown on status page)
     url: https://ml-picture-downloader.onrender.com  # Full URL to check
     method: GET                   # HTTP method (GET, POST, PUT, etc.)
@@ -43,7 +45,7 @@ sites:
 status-website:
   
   # OPTION A: If you have a custom domain (like uptime.yourcompany.com)
-  cname: demo.upptime.js.org    # Your custom domain name
+  #cname: demo.upptime.js.org    # Your custom domain name
   
   # OPTION B: If you DON'T have a custom domain, use this instead:
   baseUrl: /uptime_web          # Uses: username.github.io/uptime_web
@@ -54,10 +56,10 @@ status-website:
   # logoUrl: https://yoursite.com/your-logo.png
   
   # Title shown on the status page browser tab and header
-  name: Upptime                  # Change to "ML Picture Downloader Status" or whatever
+  name: ML Picture Downloader Status                 # Change to "ML Picture Downloader Status" or whatever
   
   # Large intro text at the top of the page
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
+  introTitle: "**ML Picture Downloader** Service Status"
   # Change to something like:
   # introTitle: "**ML Picture Downloader** Service Status"
   
