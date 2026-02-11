@@ -14,8 +14,8 @@ repo: uptime_web                  # Your repository name (must match GitHub repo
 sites:
   - name: Google
     url: https://www.google.com
-  - name: ML Picture Downloader   # Display name (shown on status page)
-    url: https://ml-picture-downloader.onrender.com  # Full URL to check
+  - name: ML Picture Downloader
+    url: https://ml-picture-downloader.onrender.com/health  # Full URL to check
     method: GET                   # HTTP method (GET, POST, PUT, etc.)
     expectedStatusCodes:          # What status codes = "service is up"
       - 200                       # 200 = OK (success)
