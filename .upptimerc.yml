@@ -1,36 +1,77 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# ====================================
+# SECTION 1: BASIC REPOSITORY INFO
+# ====================================
+owner: rai0713                    # Your GitHub username or organization name
+repo: uptime_web                  # Your repository name (must match GitHub repo)
 
+# These two tell Upptime where to commit data, create issues, and push updates
+# Change these to match YOUR GitHub account and repo name
+
+
+# ====================================
+# SECTION 2: SITES TO MONITOR
+# ====================================
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  - name: ML Picture Downloader   # Display name (shown on status page)
+    url: https://ml-picture-downloader.onrender.com  # Full URL to check
+    method: GET                   # HTTP method (GET, POST, PUT, etc.)
+    expectedStatusCodes:          # What status codes = "service is up"
+      - 200                       # 200 = OK (success)
+    timeout: 5000                 # Max wait time in milliseconds (5 seconds)
 
+# To add MORE services, add another dash (-) and repeat:
+# 
+#   - name: Service Name 2
+#     url: https://example.com
+#     method: GET
+#     expectedStatusCodes:
+#       - 200
+#     timeout: 5000
+#
+#   - name: Service Name 3
+#     url: https://api.example.com/health
+#     method: POST
+#     expectedStatusCodes:
+#       - 200
+#       - 201          # You can accept multiple status codes
+#     timeout: 3000
+
+
+# ====================================
+# SECTION 3: STATUS WEBSITE CONFIG
+# ====================================
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
+  
+  # OPTION A: If you have a custom domain (like uptime.yourcompany.com)
+  cname: demo.upptime.js.org    # Your custom domain name
+  
+  # OPTION B: If you DON'T have a custom domain, use this instead:
+  baseUrl: /uptime_web          # Uses: username.github.io/uptime_web
+  
+  # Logo shown on your status page
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
+  # Change to your own logo URL:
+  # logoUrl: https://yoursite.com/your-logo.png
+  
+  # Title shown on the status page browser tab and header
+  name: Upptime                  # Change to "ML Picture Downloader Status" or whatever
+  
+  # Large intro text at the top of the page
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
+  # Change to something like:
+  # introTitle: "**ML Picture Downloader** Service Status"
+  
+  # Smaller subtitle/description text
   introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # Change to:
+  # introMessage: Real-time monitoring of the ML Picture Downloader service. If you experience any issues, check back here for updates.
+  
+  # Navigation menu links at the top
   navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+    - title: Status               # Link text
+      href: /                     # Where it goes (root/home page)
+    
+    - title: GitHub               # Link text
+      href: https://github.com/$OWNER/$REPO  # Links to YOUR repo
+      # $OWNER and $REPO are automatically replaced with your values
+      # This becomes: https://github.com/rai0713/uptime_web
